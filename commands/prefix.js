@@ -1,5 +1,5 @@
 //prefix.js
-exports.run = (client,message,args) => {
+export function run(client,message,args) {
   if (message.member.hasPermission(["ADMINISTRATOR"])) {
     //makes new prefix the first thing that came after command, ignoring anything after spaces
     let newPrefix = args[0];
@@ -9,4 +9,4 @@ exports.run = (client,message,args) => {
   else {
     message.channel.send("You don't have permission to do that!");
   }
-};
+}
